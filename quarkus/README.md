@@ -1,6 +1,6 @@
 # Building Quarkus APPs with Maven
 
-##Create a new project
+## Create a new project
 
 With Maven, you can scaffold a new project with:
 ```
@@ -52,7 +52,7 @@ mvn package -Pnative -Dnative-image.docker-build=true
 docker build -f src/main/docker/Dockerfile.native -t quarkus-demo/quarkus-native .
 docker run -i --rm -p 8081:8080 --name quarkus-native quarkus-demo/quarkus-native:latest
 ```
-###Compering the memory usage
+### Compering the memory usage
 ```
 docker stats
 CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
