@@ -19,11 +19,7 @@ public class CacheAndCounter {
 		value++;
 		//System.out.println("...(word from CacheAndCounter: Value is now at: "+value+")");
 	}
-	@HostAccess.Export
-	public void dec() {
-		value++;
-	}
-	
+
 	@HostAccess.Export
 	public void put(String key, Object thing) {
 		theMap.put(key, thing);
@@ -32,6 +28,12 @@ public class CacheAndCounter {
 	
 	@HostAccess.Export
 	public Object get(String key) {
+		return theMap.get(key);
+	}
+	
+
+}
+ect get(String key) {
 		return theMap.get(key);
 	}
 	
